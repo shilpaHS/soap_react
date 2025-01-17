@@ -18,7 +18,7 @@ const App = () => {
     setIsUploading(true);  // Set uploading status to true
 
     try {
-      const { data } = await axios.post('https://soap-node.onrender.com/api/transcribe', formData, {
+      const { data } = await axios.post('/api/transcribe', formData, {
         headers: { 'Content-Type': 'multipart/form-data' },
       });
       setTranscription(data.transcription);
@@ -35,7 +35,7 @@ const App = () => {
     setIsGenerating(true);  // Set generating status to true
 
     try {
-      const { data } = await axios.post('https://soap-node.onrender.com/api/soap-note', { transcription });
+      const { data } = await axios.post('/api/soap-note', { transcription });
       setSoapNote(data.soapNote);
     } catch (error) {
       console.error('Error generating SOAP note:', error);
