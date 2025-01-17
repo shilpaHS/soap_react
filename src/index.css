@@ -11,3 +11,72 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+/* styles.css */
+
+/* Button Styles */
+.button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+}
+
+.button.start {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button.start:disabled {
+  background-color: #ccc;
+}
+
+.button.stop {
+  background-color: #f44336;
+  color: white;
+}
+
+.button.stop:disabled {
+  background-color: #f5c6cb;
+}
+
+.button.pause {
+  background-color: #ff9800;
+  color: white;
+}
+
+.button.pause:disabled {
+  background-color: #ffcc80;
+}
+
+.button.resume {
+  background-color: #2196F3;
+  color: white;
+}
+
+.button.resume:disabled {
+  background-color: #bbdefb;
+}
+
+
+.button.upload {
+  background-color: #818fc9;
+  color: white;
+}
+.button.soap {
+  background-color: #66c2e4;
+  color: white;
+}
+
+/* Listening Text */
+.listening-text {
+  color: orange;
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 10px;
+}

@@ -2,21 +2,23 @@ import React from 'react';
 
 const SOAPNoteDisplay = ({ soapNote }) => {
   let parsedNote = null;
-  
+  let content = "No SOAP note generated yet.";
+
   try {
     // Parse the soapNote string into an object
-    parsedNote = JSON.parse(soapNote);
+    if (soapNote) {
+      parsedNote = JSON.parse(soapNote);
+      // Extract content from choices if available
+      content = parsedNote.choices?.[0]?.message?.content || content;
+    }
   } catch (error) {
     console.error("Error parsing soapNote:", error);
   }
 
-  // Extract content from choices if available
-  const content = parsedNote && parsedNote.choices && parsedNote.choices[0]?.message?.content;
-
   return (
     <div>
       <h2>SOAP Note:</h2>
-      <pre>{content || "No SOAP note generated yet."}</pre>
+      <pre>{content}</pre>
     </div>
   );
 };
