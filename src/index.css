@@ -13,13 +13,35 @@ code {
 }
 /* styles.css */
 
+/* Ensure the app takes full available space */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.App {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-y: auto; /* To handle scrolling in case of long content */
+}
+
+
+
+/* styles.css */
+
 /* Button Styles */
 .button {
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  margin: 5px;
+  max-width: 100%;
+  margin: 10px 0;
   transition: background-color 0.3s ease;
 }
 
